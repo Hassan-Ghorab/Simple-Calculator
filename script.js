@@ -179,7 +179,7 @@ window.addEventListener("keydown", (e) => {
     clickOperations(e.key);
   } else if (e.key === "*") {
     clickOperations("x");
-  } else if (e.key === "=" || e.key == "Enter") {
+  } else if (e.key === "=") {
     clickEqual();
   } else if (e.key === "c" || e.key === "Backspace") {
     clickCKey(e.key);

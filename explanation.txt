@@ -64,7 +64,7 @@ logic elements
   storedNumber = "";
   result = "";
 
-function updateScreen
+function updateScreeng
 to see the finalResult.innerText to update the slicing of one number from the currentNumber
 
 eventListener for clearLastEntityBtn:
