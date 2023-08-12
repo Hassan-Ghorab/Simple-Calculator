@@ -1,0 +1,83 @@
+First You need to select all the elements you will use from the HTML.
+
+storedNumber: variable is the first value the user enter.
+operationSign: variable is the math sign the user enter.
+currentNumber: variable is the second value the user enter.
+haveDot: variable is a check to know the user entered a dot before or not.
+result: variable is the container of the storedNumber, operationSign, and the currentNumber.
+
+First you need to loop throw all buttons
+You will make if statement to check if the user entered the dot or not:
+So if button clicked === the dot and the dot is false it's ok to enter the dot and then make it true.
+
+Another if statement or if else to check if the user entered the dot or not:
+So if button clicked === the dot and the dot is true stop or return to stop the user enter it again.
+
+currentNumber += The number you will click this is for the logic.
+finalResult variable will store the currentNumber value this is for the screen you will see
+
+Second you need to loop throw all operations buttons
+You will make the eventListener on all operations buttons
+You will make if statement to check if there's a currentNumber or not 
+Because it's not logic to put the operationSign before putting any number
+Then you will make the dot false to make the user able to use it again in the second number
+You will make a variable to store the operationSign
+and the operationSign === operationName
+You will make if statement to check if there's the storedNumber, operationSign and the currentNumber 
+to execute the math function which will calculate the numbers
+else you will set the current number to the result and wait the user to enter the operationSign and the other number
+
+
+mathOperation Function:
+You will make a switch or an if statement and i would rather making a switch it's good for performance
+and you will simply check the operationSign that user clicked and make it's operation
+then give it to the result
+
+result = parseFloat(result) % parseFloat(currentNumber);
+result variable = parseFloat(the number was in the stored number) (operationSign) parseFloat(currentNumber)
+
+setCurrentNumberToStoredNumber();
+Then you will do the function that give the currentNumber to the storedNumber then take another number
+storedNumber = currentNumber + operationSign
+then you will update the storedOperationHistory in the screen with the storedNumber
+will empty the finalResult because no other number yet
+You will empty the currentNumber then the temp result because you got the finalResult
+
+eventListener for equal btn:
+First you need to check that you have both stored and current number and of course you will have the operationSign
+then you will make the dot false to be able to use it in the new operation
+You will call the setCurrentNumberToStoredNumber and the mathOperation functions
+You will update the html result with the result in the logic
+empty the tempHistory
+currentNumber = result to see if you want to make another operation on it
+storedNumber will be empty until you make another operation so it will take the result at first
+
+eventListener for clearAll btn:
+you have to clear the logic and screen 
+screen elements or html elements
+  storedOperationHistory.innerText = "0";
+  finalResult.innerText = "0";
+  tempResult.innerText = "0";
+
+logic elements
+  currentNumber = "";
+  storedNumber = "";
+  result = "";
+
+function updateScreen
+to see the finalResult.innerText to update the slicing of one number from the currentNumber
+
+eventListener for clearLastEntityBtn:
+You will check if the currentNumber.length > 0 to do the following 
+You will slice one number from the currentNumber
+and call updateScreen to show the changes in the screen
+Otherwise you don't want anything to work
+
+function btnsClickingEffect:
+Is a function to make an effect while clicking the keyboard keys
+You give a class to the element and remove it after 300ms
+Then you use the click method to make the function of the key work
+
+functions of clicking the keyboard keys
+It's about making if statement to know which key you are pressing to make it's function work
+It will have an effect and it's function of eventListener will work too because of the click method we use.
